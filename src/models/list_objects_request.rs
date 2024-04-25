@@ -29,9 +29,9 @@ pub struct ListObjectsRequest {
 }
 
 impl ListObjectsRequest {
-    pub fn new(r#type: String, relation: String, user: String) -> ListObjectsRequest {
+    pub fn new(authorization_model_id: Option<String>, r#type: String, relation: String, user: String) -> ListObjectsRequest {
         ListObjectsRequest {
-            authorization_model_id: None,
+            authorization_model_id,
             r#type,
             relation,
             user,
